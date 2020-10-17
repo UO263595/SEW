@@ -1,3 +1,8 @@
+/* a=0 b=0 c=2 especificidad: 002 */
+nav li {
+	float: left;
+}
+
 /* a=0 b=0 c=3 especificidad: 003 */
 nav li a {
 	display: block;
