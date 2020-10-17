@@ -1,7 +1,6 @@
 /* a=0 b=0 c=2 especificidad: 002 */
 nav ul {
 	list-style-type: none;
-	overflow: hidden;
 	background-color: #333;
 }
 
