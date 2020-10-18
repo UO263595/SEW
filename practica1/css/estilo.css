@@ -112,7 +112,7 @@ footer a:visited {
 
 /* a=0 b=1 c=2 especificidad: 012 */
 footer a:hover {
-	color: red;
+	color: green;
 }
 
 /* a=0 b=0 c=2 especificidad: 002 */
