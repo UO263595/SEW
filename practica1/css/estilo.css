@@ -148,3 +148,8 @@ aside {
 ol {
 	list-style-type: upper-roman;
 }
+
+/* a=0 b=1 c=2 especificidad: 012 */
+section.bibliografia li {
+	padding-bottom: 2em;
+}
