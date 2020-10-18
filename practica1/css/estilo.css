@@ -107,12 +107,12 @@ footer a:link {
 /* a=0 b=1 c=2 especificidad: 012 */
 footer a:visited {
     text-decoration: underline #333;
-    color: green;
+    color: #9E0000;
 }
 
 /* a=0 b=1 c=2 especificidad: 012 */
 footer a:hover {
-	color: green;
+	color: #9E0000;
 }
 
 /* a=0 b=0 c=2 especificidad: 002 */
