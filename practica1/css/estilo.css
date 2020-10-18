@@ -55,7 +55,6 @@ h3, h4, h5, h6 {
 p {
 	font-family: "Times New Roman", serif;
 	text-align: left;
-    text-justify: none; 
 }
 
 /* a=0 b=0 c=1 especificidad: 001 */
@@ -102,7 +101,7 @@ table tr td, table tr th {
 footer a:link {
     text-decoration: none;
 	font-weight: bold;
-    color: #154360;
+    color: #1E00FF;
 }
 
 /* a=0 b=1 c=2 especificidad: 012 */
