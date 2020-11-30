@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Aplicación</title>
+	<link rel="stylesheet" href="Ejercicio14.css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Aplicación</h1>
+	<h2>Carga un archivo de imagen desde la máquina cliente y la visualiza</h2>
+	<h3 id="soportaAPI"></h3>
+	<h4>Selecciona un archivo: </h4>
+	<input type="file" id="archivo" onchange="visualizador.cargarArchivo(this.files)">
+	<canvas id="canvas"></canvas>
+	<button id="bFullscreen" onClick="visualizador.fullscreen()">Ver en pantalla completa</button>
+	<script src="Ejercicio14.js"></script>
+</body>
+</html>

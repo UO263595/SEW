@@ -1,0 +1,75 @@
+{
+	"type": "FeatureCollection",
+	"name": "rutas",
+	"crs": 
+	{ 
+		"type": "name", 
+		"properties": 
+		{ 
+			"name": "urn:ogc:def:crs:OGC:1.3:CRS84" 
+		} 
+	},
+	"features": [
+		{ 
+			"type": "Feature", 
+			"properties": 
+			{ 
+				"Name": "Ruta portuguesa", 
+				"altitudeMode": "relativeToGround", 
+				"tessellate": 1, 
+				"extrude": 1 
+			}, 
+			"geometry": 
+			{ 
+				"type": "LineString", 
+				"coordinates": [ 
+					[-3.560833333333333,40.472222222222221], 
+					[-8.616111111111111,41.1475], 
+					[-9.390555555555554,38.7875], 
+					[-9.206666666666665,38.6975] 
+				] 
+			} 
+		},
+		{ 
+			"type": "Feature", 
+			"properties": 
+			{ 
+				"Name": "Ruta Islas", 
+				"altitudeMode": "relativeToGround", 
+				"tessellate": 1, 
+				"extrude": 1 
+			}, 
+			"geometry": 
+			{ 
+				"type": "LineString", 
+				"coordinates": [ 
+					[-17.886944444444445,27.814722222222223], 
+					[-13.842777777777778,28.693055555555556], 
+					[-17.833333333333332,28.75],
+					[-17.237222222222222,28.126111111111111], 
+					[-16.630555555555556,28.223055555555554] 
+				]
+			} 
+		},
+		{ 
+			"type": "Feature", 
+			"properties": 
+			{ 
+				"Name": "Ruta por España", 
+				"altitudeMode": "relativeToGround", 
+				"tessellate": 1, "extrude": 1 
+			}, 
+			"geometry": 
+			{ 
+				"type": "LineString", 
+				"coordinates": [ 
+					[-8.415277777777778,42.896388888888886],
+					[2.176388888888889,41.38388888888889], 
+					[3.330555555555555,39.535833333333329], 
+					[-4.411666666666667,36.723333333333336], 
+					[-3.7075,40.415555555555557] 
+				] 
+			} 
+		}
+	]
+}

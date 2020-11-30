@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora Dietética</title>
+	<link rel="stylesheet" href="CalculadoraDietetica.css"/>
+</head>
+<body>
+	<h1>Calculadora Dietética</h1>   
+	<form>
+		<div class="calculadora">
+		<div class="cuerpo">
+			<div class="pantallas">
+				<div><input class="pantalla" type="text" id="modo" disabled /></div>
+				<div><label for="pantalla1" id="labelPantalla1"></label><input class="pantalla" type="text" id="pantalla1" disabled /></div>
+				<div><label for="pantalla2" id="labelPantalla2"></label><input class="pantalla" type="text" id="pantalla2" disabled /></div>
+				<div><label for="pantalla3" id="labelPantalla3"></label><input class="pantalla" type="text" id="pantalla3" disabled /></div>
+				<div><label for="resultado" id="labelResultado"></label><input class="pantalla" type="text" id="resultado" disabled /></div>
+			</div>
+			<div class="botones">
+				<div>
+					<input type="button" value="C" onClick = "calculadoraDietetica.borrar()">
+					<input type="button" value="7" onClick = "calculadoraDietetica.digitos('7')">
+					<input type="button" value="8" onClick = "calculadoraDietetica.digitos('8')">
+					<input type="button" value="9" onClick = "calculadoraDietetica.digitos('9')">
+				</div>
+				<div>
+					<input type="button" value="." onClick = "calculadoraDietetica.punto()">
+					<input type="button" value="4" onClick = "calculadoraDietetica.digitos('4')">
+					<input type="button" value="5" onClick = "calculadoraDietetica.digitos('5')">
+					<input type="button" value="6" onClick = "calculadoraDietetica.digitos('6')">
+				</div>
+				<div>
+					<input type="button" value="0" onClick = "calculadoraDietetica.digitos('0')">
+					<input type="button" value="1" onClick = "calculadoraDietetica.digitos('1')">
+					<input type="button" value="2" onClick = "calculadoraDietetica.digitos('2')">
+					<input type="button" value="3" onClick = "calculadoraDietetica.digitos('3')">
+				</div>
+			</div>
+			<div class="controles">
+				<div>
+					<input type="button" value="&#129093;" onClick = "calculadoraDietetica.arriba()">
+				</div>
+				<div>
+					<input type="button" value="&#129092;" onClick = "calculadoraDietetica.izquierda()">
+					<input type="button" value="enter" onClick = "calculadoraDietetica.enter()">
+					<input type="button" value="&#129094;" onClick = "calculadoraDietetica.derecha()">
+				</div>
+				<div>
+					<input type="button" value="&#129095;" onClick = "calculadoraDietetica.abajo()">
+				</div>
+			</div>
+		</div>
+		</div>
+	</form>
+	<script src="CalculadoraDietetica.js"></script>
+</body>
+</html>

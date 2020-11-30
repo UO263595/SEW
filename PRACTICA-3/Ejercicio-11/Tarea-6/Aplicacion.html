@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Aplicación</title>
+	<link rel="stylesheet" href="Aplicacion.css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Aplicación</h1>
+	<h2>Buscador en mapa por coordenadas (en decimal)</h1>
+	<div class="busqueda">
+		<div><label for="inputLatitud">Latitud: </label><input type="text" id="inputLatitud" placeholder="Introduce la latitud..."/></div>
+		<div><label for="inputLongitud">Longitud: </label><input type="text" id="inputLongitud" placeholder="Introduce la longitud..."/></div>
+	</div>
+	<button id="bBuscar" onclick = "aplicacion.buscar()">Buscar</button>
+	<div id="mapa"></div>
+	<script src="Aplicacion.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU&callback=mapaDinamicoGoogle.initMap"></script>
+</body>
+</html>

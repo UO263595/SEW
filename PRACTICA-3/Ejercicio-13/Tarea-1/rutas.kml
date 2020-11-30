@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id='Rutas en avión'>
+<Placemark><name>Ruta portuguesa</name><LineString><extrude>1</extrude><tessellate>1</tessellate>
+<coordinates>
+-3.560833333333333,40.47222222222222,610
+-8.616111111111111,41.1475,83
+-9.390555555555554,38.7875,500
+-9.206666666666665,38.6975,11
+</coordinates><altitudeMode>relativeToGround</altitudeMode></LineString><Style><LineStyle><color>#FF1400FF</color><width>6</width></LineStyle></Style></Placemark><Placemark><name>Ruta Islas</name><LineString><extrude>1</extrude><tessellate>1</tessellate>
+<coordinates>
+-17.886944444444445,27.814722222222223,1501
+-13.842777777777778,28.693055555555556,50
+-17.833333333333332,28.75,2426
+-17.237222222222222,28.12611111111111,1475
+-16.630555555555556,28.223055555555554,3710
+</coordinates><altitudeMode>relativeToGround</altitudeMode></LineString><Style><LineStyle><color>#FF14F000</color><width>6</width></LineStyle></Style></Placemark><Placemark><name>Ruta por España</name><LineString><extrude>1</extrude><tessellate>1</tessellate>
+<coordinates>
+-8.415277777777778,42.896388888888886,370
+2.176388888888889,41.38388888888889,94
+3.3305555555555553,39.53583333333333,6
+-4.411666666666667,36.723333333333336,11
+-3.7075,40.41555555555556,667
+</coordinates><altitudeMode>relativeToGround</altitudeMode></LineString><Style><LineStyle><color>#FF7800B4</color><width>6</width></LineStyle></Style></Placemark></Document></kml>

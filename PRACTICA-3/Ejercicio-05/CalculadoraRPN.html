@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora RPN</title>
+	<link rel="stylesheet" href="CalculadoraRPN.css"/>
+</head>
+<body>
+	<h1>Calculadora RPN</h1>   
+	<form>
+		<div class="cuerpo">
+			<input type="text" id="pila" disabled />
+			<input type="text" id="pantalla" disabled />
+			<div>
+				<input class="darkGray" type="button" value="m-" onClick = "calculadoraRPN.mMenos()">
+				<input class="darkGray" type="button" value="m+" onClick = "calculadoraRPN.mMas()">
+				<input class="darkGray" type="button" value="sin" onClick = "calculadoraRPN.seno()">
+				<input class="darkGray" type="button" value="cos" onClick = "calculadoraRPN.coseno()">
+				<input class="darkGray" type="button" value="tan" onClick = "calculadoraRPN.tangente()">
+			</div>
+			<div>
+				<input class="darkGray" type="button" value="x&#178;" onClick = "calculadoraRPN.cuadrado()">
+				<input class="darkGray" type="button" value="x&#696" onClick = "calculadoraRPN.potencia()">
+				<input class="darkGray" type="button" value="csc" onClick = "calculadoraRPN.cosecante()">
+				<input class="darkGray" type="button" value="sec" onClick = "calculadoraRPN.secante()">
+				<input class="darkGray" type="button" value="cot" onClick = "calculadoraRPN.cotangente()">
+			</div>
+			<div>
+				<input class="darkGray" type="button" value="&#8730;" onClick = "calculadoraRPN.raiz()">
+				<input class="darkGray" type="button" value="10&#829" onClick = "calculadoraRPN.potenciaDiez()">
+				<input class="darkGray" type="button" value="log" onClick = "calculadoraRPN.logaritmo()">
+				<input class="darkGray" type="button" value="Exp" onClick = "calculadoraRPN.exponencial()">
+				<input class="darkGray" type="button" value="Mod" onClick = "calculadoraRPN.modulo()">
+			</div>
+			<div>
+				<input class="darkGray" class="darkGray" type="button" value="mrc" onClick = "calculadoraRPN.mrc()">
+				<input class="darkGray" type="button" value="CE" onClick = "calculadoraRPN.desapilar()">
+				<input class="darkGray" type="button" value="C" onClick = "calculadoraRPN.borrarTodo()">
+				<input class="darkGray" type="button" value="&#129092;" onClick = "calculadoraRPN.borrarDigito()">
+				<input class="darkGray" type="button" value="&#247;" onClick = "calculadoraRPN.division()">
+			</div>
+			<div>
+				<input class="darkGray" type="button" value="&#120587;" onClick = "calculadoraRPN.pi()">
+				<input class="lightGray" type="button" value="7" onClick = "calculadoraRPN.digitos('7')">
+				<input class="lightGray" type="button" value="8" onClick = "calculadoraRPN.digitos('8')">
+				<input class="lightGray" type="button" value="9" onClick = "calculadoraRPN.digitos('9')">
+				<input class="darkGray" type="button" value="&#10005;" onClick = "calculadoraRPN.multiplicacion()">
+			</div>
+			<div>
+				<input class="darkGray" type="button" value="n!" onClick = "calculadoraRPN.factorial()">
+				<input class="lightGray" type="button" value="4" onClick = "calculadoraRPN.digitos('4')">
+				<input class="lightGray" type="button" value="5" onClick = "calculadoraRPN.digitos('5')">
+				<input class="lightGray" type="button" value="6" onClick = "calculadoraRPN.digitos('6')">
+				<input class="darkGray" type="button" value="-" onClick = "calculadoraRPN.resta()">	
+			</div>
+			<div>
+				<input class="darkGray" type="button" value="|x|" onClick = "calculadoraRPN.absoluto()">
+				<input class="lightGray" type="button" value="1" onClick = "calculadoraRPN.digitos('1')">
+				<input class="lightGray" type="button" value="2" onClick = "calculadoraRPN.digitos('2')">
+				<input class="lightGray" type="button" value="3" onClick = "calculadoraRPN.digitos('3')">
+				<input class="darkGray" type="button" value="+" onClick = "calculadoraRPN.suma()">
+			</div>
+			<div>
+				<input class="darkGray" type="button" value="( )" onClick = "calculadoraRPN.parentesis()">
+				<input class="darkGray" type="button" value="=" onClick = "calculadoraRPN.igual()">
+				<input class="lightGray" type="button" value="0" onClick = "calculadoraRPN.digitos('0')">
+				<input class="lightGray" type="button" value="." onClick = "calculadoraRPN.punto()">
+				<input class="darkGray" type="button" value="enter" onClick = "calculadoraRPN.apilar()">
+			</div>
+		</div>
+	</form>
+	<script src="CalculadoraRPN.js"></script>
+</body>
+</html>

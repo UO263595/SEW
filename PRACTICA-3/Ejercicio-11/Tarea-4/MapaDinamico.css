@@ -1,0 +1,18 @@
+h1 {
+	font-family: "Arial Black", "Gadget", sans-serif;
+	font-size: 4em;
+	color: black;
+}
+h2 {
+	font-family: "Arial", sans-serif;
+	font-size: 2em;
+	color: black;
+}
+body {
+	background-color: silver;
+	padding: 2em 5em;
+}
+#mapa {
+    height: 500px;
+    width: 100%;
+}

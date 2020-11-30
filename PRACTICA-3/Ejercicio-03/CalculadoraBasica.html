@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora Básica</title>
+	<link rel="stylesheet" href="CalculadoraBasica.css"/>
+</head>
+<body>
+	<h1>Calculadora Básica</h1>   
+	<form>
+		<div class="cuerpo">
+			<input type="text" id="pantalla" disabled />
+			<div>
+				<input class="darkGray" type="button" value="mrc" onClick = "calculadoraBasica.mrc()">
+				<input class="darkGray" type="button" value="m-" onClick = "calculadoraBasica.mMenos()">
+				<input class="darkGray" type="button" value="m+" onClick = "calculadoraBasica.mMas()">
+				<input class="red" type="button" value="/" onClick = "calculadoraBasica.division()">
+			</div>
+			<div>
+				<input class="lightGray" type="button" value="7" onClick = "calculadoraBasica.digitos('7')">
+				<input class="lightGray" type="button" value="8" onClick = "calculadoraBasica.digitos('8')">
+				<input class="lightGray" type="button" value="9" onClick = "calculadoraBasica.digitos('9')">
+				<input class="red" type="button" value="*" onClick = "calculadoraBasica.multiplicacion()">
+			</div>
+			<div>
+				<input class="lightGray" type="button" value="4" onClick = "calculadoraBasica.digitos('4')">
+				<input class="lightGray" type="button" value="5" onClick = "calculadoraBasica.digitos('5')">
+				<input class="lightGray" type="button" value="6" onClick = "calculadoraBasica.digitos('6')">
+				<input class="red" type="button" value="-" onClick = "calculadoraBasica.resta()">
+			</div>
+			<div>
+				<input class="lightGray" type="button" value="1" onClick = "calculadoraBasica.digitos('1')">
+				<input class="lightGray" type="button" value="2" onClick = "calculadoraBasica.digitos('2')">
+				<input class="lightGray" type="button" value="3" onClick = "calculadoraBasica.digitos('3')">
+				<input class="red" type="button" value="+" onClick = "calculadoraBasica.suma()">
+			</div>
+			<div>
+				<input class="lightGray" type="button" value="0" onClick = "calculadoraBasica.digitos('0')">
+				<input class="lightGray" type="button" value="." onClick = "calculadoraBasica.punto()">
+				<input class="lightGray" type="button" value="C" onClick = "calculadoraBasica.borrar()">
+				<input class="lightGray" type="button" value="=" onClick = "calculadoraBasica.igual()">
+			</div>
+		</div>
+	</form>
+	<script src="CalculadoraBasica.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 7</title>
+	<link rel="stylesheet" href="Ejercicio7.css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Ejercicio 7</h1>
+	<h2>Tarea 1</h2>
+	<p>Párrafo 1</p>
+	<p>Párrafo 2</p>
+	<button id="ocultar" onClick="funciones.ocultar()">Ocultar párrafos</button>
+	<button id="mostrar" onClick="funciones.mostrar()">Mostrar párrafos</button>
+	<h2>Tarea 2</h2>
+	<p>Nombre: <input type="text" id="campoNombre" value="María"></p>
+	<p>Apellidos: <input type="text" id="campoApellidos" value="Fernández Rojo"></p>
+	<input type="button" id="botonNombre" Value="Nombre" onclick="funciones.verNombre()" />
+	<input type="button" id="botonApellidos" Value="Apellidos" onclick="funciones.verApellidos()"/>
+	<p id="pColor">Pulsa el botón para modificar el color de fondo del párrafo.</p>
+	<button id="modificaColor" onClick="funciones.modificaColor()">Modifica el color</button>
+	<p id="pModificar">Opción 1 (pulsa los botones para cambiar de opción)</p>
+	<button id="bOpcion1" onClick="funciones.opcion1()">Opción 1</button>
+	<button id="bOpcion2" onClick="funciones.opcion2()">Opción 2</button>
+	<h2>Tarea 3</h2>
+	<button id="bInsertar" onClick="funciones.insertar()">Añade un párrafo</button>
+	<h2>Tarea 4</h2>
+	<p id="pEliminar">Pulsa el botón para eliminar el párrafo.</p>
+	<button id="bEliminar" onClick="funciones.eliminar()">Elimina el párrafo</button>
+	<h2>Tarea 5</h2>
+	<button id="bRecorrer" onClick="funciones.recorrer()">Recorrer elementos</button>
+	<h2>Tarea 6</h2>
+	<h3>Tabla</h3>
+	<table>
+		<tr>
+			<td>1</td><td>2</td><td>3</td>
+		</tr>
+		<tr>
+			<td>4</td><td>5</td><td>6</td>
+		</tr>
+		<tr>
+			<td>7</td><td>8</td><td>9</td>
+		</tr>
+	</table>
+	<button id="bSumar" onClick="funciones.sumar()">Suma los elementos de la tabla</button>
+	<script src="Ejercicio7.js"></script>
+</body>
+</html>

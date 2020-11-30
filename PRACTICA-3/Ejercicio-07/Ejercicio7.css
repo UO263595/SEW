@@ -1,0 +1,35 @@
+h1 {
+	font-family: "Arial Black", "Gadget", sans-serif;
+	font-size: 4em;
+	color: black;
+}
+h2 {
+	font-family: "Arial", sans-serif;
+	font-size: 2em;
+	color: black;
+}
+h3::first-letter {
+	font-size: 130%;
+}
+p {
+	font-family: "Times New Roman", serif;
+	text-align: left;
+}
+table {
+    border-collapse: collapse;
+    margin-bottom: 3em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+table tr td, table tr th {
+    border: 3px solid black;
+    text-align: center;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+body {
+	background-color: silver;
+	padding: 2em 5em;
+}
