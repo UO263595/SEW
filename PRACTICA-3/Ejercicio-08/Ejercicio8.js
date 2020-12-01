@@ -38,7 +38,7 @@ class Meteo {
 				$("<img>").attr("src",icono).appendTo("div");
 			},
 			error:function(){
-				$("h3").html("¡Tenemos problemas! No puedo obtener JSON de <a href='http://openweathermap.org'>OpenWeatherMap</a>"); 
+				$("h3").html("¡Tenemos problemas! No puedo obtener JSON de <a href='https://openweathermap.org'>OpenWeatherMap</a>"); 
 				$("div").remove();
 				$("h4").remove();
 				$("p").remove();
@@ -57,9 +57,9 @@ class Meteo {
 		$("h4").remove();
 		$("p").remove();
 		this.ciudad = "Madrid";
-		this.url = "http://api.openweathermap.org/data/2.5/weather?q=" + this.ciudad + "," + this.codigoPais + this.unidades + this.idioma + "&APPID=" + this.apikey;
-		this.correcto = "¡Todo correcto! JSON recibido de <a href='http://openweathermap.org'>OpenWeatherMap</a>"
-		this.crearElemento("h2","Datos de Madrid desde <a href='http://openweathermap.org'>OpenWeatherMap</a>","#bMadrid"); 
+		this.url = "https://api.openweathermap.org/data/2.5/weather?q=" + this.ciudad + "," + this.codigoPais + this.unidades + this.idioma + "&APPID=" + this.apikey;
+		this.correcto = "¡Todo correcto! JSON recibido de <a href='https://openweathermap.org'>OpenWeatherMap</a>"
+		this.crearElemento("h2","Datos de Madrid desde <a href='https://openweathermap.org'>OpenWeatherMap</a>","#bMadrid"); 
 		this.crearElemento("h3",this.correcto,"#bMadrid");
 		this.crearElemento("div","","#bMadrid");
 		this.crearElemento("h4","Datos","#bMadrid");
@@ -73,9 +73,9 @@ class Meteo {
 		$("h4").remove();
 		$("p").remove();
 		this.ciudad = "Santa Cruz de Tenerife";
-		this.url = "http://api.openweathermap.org/data/2.5/weather?q=" + this.ciudad + "," + this.codigoPais + this.unidades + this.idioma + "&APPID=" + this.apikey;
-		this.correcto = "¡Todo correcto! JSON recibido de <a href='http://openweathermap.org'>OpenWeatherMap</a>"
-		this.crearElemento("h2","Datos de Santa Cruz de Tenerife desde <a href='http://openweathermap.org'>OpenWeatherMap</a>","#bMadrid"); 
+		this.url = "https://api.openweathermap.org/data/2.5/weather?q=" + this.ciudad + "," + this.codigoPais + this.unidades + this.idioma + "&APPID=" + this.apikey;
+		this.correcto = "¡Todo correcto! JSON recibido de <a href='https://openweathermap.org'>OpenWeatherMap</a>"
+		this.crearElemento("h2","Datos de Santa Cruz de Tenerife desde <a href='https://openweathermap.org'>OpenWeatherMap</a>","#bMadrid"); 
 		this.crearElemento("h3",this.correcto,"#bMadrid");
 		this.crearElemento("div","","#bMadrid");
 		this.crearElemento("h4","Datos","#bMadrid");
@@ -89,9 +89,9 @@ class Meteo {
 		$("h4").remove();
 		$("p").remove();
 		this.ciudad = "Santiago de Compostela";
-		this.url = "http://api.openweathermap.org/data/2.5/weather?q=" + this.ciudad + "," + this.codigoPais + this.unidades + this.idioma + "&APPID=" + this.apikey;
-		this.correcto = "¡Todo correcto! JSON recibido de <a href='http://openweathermap.org'>OpenWeatherMap</a>"
-		this.crearElemento("h2","Datos de Santiago de Compostela desde <a href='http://openweathermap.org'>OpenWeatherMap</a>","#bMadrid"); 
+		this.url = "https://api.openweathermap.org/data/2.5/weather?q=" + this.ciudad + "," + this.codigoPais + this.unidades + this.idioma + "&APPID=" + this.apikey;
+		this.correcto = "¡Todo correcto! JSON recibido de <a href='https://openweathermap.org'>OpenWeatherMap</a>"
+		this.crearElemento("h2","Datos de Santiago de Compostela desde <a href='https://openweathermap.org'>OpenWeatherMap</a>","#bMadrid"); 
 		this.crearElemento("h3",this.correcto,"#bMadrid");
 		this.crearElemento("div","","#bMadrid");
 		this.crearElemento("h4","Datos","#bMadrid");
