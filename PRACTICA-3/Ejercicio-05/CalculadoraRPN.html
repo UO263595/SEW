@@ -6,10 +6,13 @@
 	<link rel="stylesheet" href="CalculadoraRPN.css"/>
 </head>
 <body>
-	<h1>Calculadora RPN</h1>   
-	<form>
+	<header>
+		<h1>Calculadora RPN</h1>   
+	</header>
 		<div class="cuerpo">
+			<label for="pila">PILA</label>
 			<input type="text" id="pila" disabled />
+			<label for="pantalla">RESULTADO</label>
 			<input type="text" id="pantalla" disabled />
 			<div>
 				<input class="darkGray" type="button" value="m-" onClick = "calculadoraRPN.mMenos()">
@@ -68,7 +71,6 @@
 				<input class="darkGray" type="button" value="enter" onClick = "calculadoraRPN.apilar()">
 			</div>
 		</div>
-	</form>
 	<script src="CalculadoraRPN.js"></script>
 </body>
 </html>
