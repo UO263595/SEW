@@ -48,7 +48,7 @@ class Visualizador {
 		var ctx = canvas.getContext("2d");
 		ctx.beginPath();
 		ctx.moveTo(ultimaX, ultimaY);
-		ctx.lineTo(e.offsetX, e.offsetY);
+		ctx.lineTo(ultimaX, ultimaY);
 		ctx.stroke();
 		[ultimaX, ultimaY] = [e.offsetX, e.offsetY];
 	}
