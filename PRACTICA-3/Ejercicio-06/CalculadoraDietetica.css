@@ -1,7 +1,7 @@
 div.calculadora {
 	display: table;
 	padding: 1em;
-	background-color: #606060;
+	background-color: #919191;
 	margin: 0 auto;
 	border-radius: 15px;
 }
@@ -25,7 +25,7 @@ input.pantalla {
 	width: 95%;
 	font-size: 1.5em;
 }
-#pantalla1, #pantalla2, #pantalla3, #resultado {
+#modo, #pantalla1, #pantalla2, #pantalla3, #resultado {
 	text-align: center;
 	width: 55%;
 }
