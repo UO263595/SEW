@@ -6,10 +6,11 @@
 	<link rel="stylesheet" href="CalculadoraCientifica.css"/>
 </head>
 <body>
-	<h1>Calculadora Científica</h1>   
-	<form>
+	<header>
+		<h1>Calculadora Básica</h1> 
+	</header>
 		<div class="cuerpo">
-			<input type="text" id="pantalla" disabled />
+			<input title="pantalla" type="text" id="pantalla" disabled />
 			<div>
 				<input class="darkGray" type="button" value="m-" onClick = "calculadoraCientifica.mMenos()">
 				<input class="darkGray" type="button" value="m+" onClick = "calculadoraCientifica.mMas()">
@@ -67,7 +68,6 @@
 				<input class="darkGray" type="button" value="=" onClick = "calculadoraCientifica.igual()">
 			</div>
 		</div>
-	</form>
 	<script src="CalculadoraCientifica.js"></script>
 </body>
 </html>
