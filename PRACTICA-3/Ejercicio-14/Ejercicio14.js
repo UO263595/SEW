@@ -14,8 +14,8 @@ class Visualizador {
 		ctx.lineCap = "round";
 		
 		this.isDrawing = false;
-		this.lastX = 0;
-		this.lastY = 0;
+		this.ultimaX = 0;
+		this.ultimaY = 0;
 	}
 	cargarArchivo(files) {
 		var archivo = files[0];
@@ -42,21 +42,30 @@ class Visualizador {
 	dibujar(e) {
 		if (!this.isDrawing) return;
 		console.log(e);
-		var lastX = e.offsetX;
-		var lastY = e.offsetY;
+		var ultimaX = e.offsetX;
+		var ultimaY = e.offsetY;
 		var canvas = document.getElementById("canvas");
 		var ctx = canvas.getContext("2d");
 		ctx.beginPath();
-		ctx.moveTo(lastX, lastY);
+		ctx.moveTo(ultimaX, ultimaY);
 		ctx.lineTo(e.offsetX, e.offsetY);
 		ctx.stroke();
-		[lastX, lastY] = [e.offsetX, e.offsetY];
+		[ultimaX, ultimaY] = [e.offsetX, e.offsetY];
 	}
 	empezarADibujar() {
 		this.isDrawing = true;
 	}
 	pararDeDibujar() {
 		this.isDrawing = false;
+	}
+	borrar() {
+		var canvas = document.getElementById("canvas");
+		canvas.width=canvas.width;
+		var ctx = canvas.getContext("2d");
+		ctx.strokeStyle = "#000";
+		ctx.lineWidth = 5;
+		ctx.lineJoin = "round";
+		ctx.lineCap = "round";
 	}
 }
 var visualizador = new Visualizador();

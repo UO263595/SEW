@@ -7,12 +7,14 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	<h1>Aplicación</h1>
-	<h2>Carga un archivo de imagen desde la máquina cliente y la visualiza</h2>
-	<h3 id="soportaAPI"></h3>
-	<h4>Selecciona un archivo: </h4>
+	<header>
+		<h1>Aplicación</h1>
+	</header>
+	<p>Carga un archivo de imagen desde la máquina cliente y la visualiza</p>
+	<label for="archivo">Selecciona un archivo: </label>
 	<input type="file" id="archivo" onchange="visualizador.cargarArchivo(this.files)">
 	<canvas id="canvas"></canvas>
+	<button id="bBorrar" onClick="visualizador.borrar()">Borrar</button>
 	<button id="bFullscreen" onClick="visualizador.fullscreen()">Ver en pantalla completa</button>
 	<script src="Ejercicio14.js"></script>
 </body>
