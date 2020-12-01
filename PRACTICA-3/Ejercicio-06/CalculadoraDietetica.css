@@ -20,11 +20,6 @@ input.pantalla {
 	height: 2em;
 	margin: auto;
 }
-#modo {
-	text-align: center;
-	width: 95%;
-	font-size: 1.5em;
-}
 #modo, #pantalla1, #pantalla2, #pantalla3, #resultado {
 	text-align: center;
 	width: 55%;
