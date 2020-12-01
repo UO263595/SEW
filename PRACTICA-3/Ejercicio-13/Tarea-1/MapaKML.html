@@ -8,11 +8,12 @@
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU&callback=mapaDinamicoGoogle.initMap"></script>
 </head>
 <body>
-	<h1>Mapa KML</h1>
+	<header>
+		<h1>Mapa KML</h1>
+	</header>
 	<h2>Carga un archivo KML</h2>
 	<h3 id="soportaAPI"></h3>
-	<h4>Selecciona un archivo: </h4>
-	<input type="file" id="archivoTexto" onchange="mapa.cargarMapa(this.files)">
+	<label for="archivoTexto">Selecciona un archivo: </label><input type="file" id="archivoTexto" onchange="mapa.cargarMapa(this.files)">
 	<p id="nombreArchivo"></p>
 	<pre id="areaTexto"></pre>
 	<div id="mapa"></div>
