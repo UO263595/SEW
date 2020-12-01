@@ -22,8 +22,12 @@ body {
 input {
 	width: 100%;
 }
-#bFullscreen {
+button {
 	text-align: center;
+	padding: 0.4em 1em;
+	margin: 0.8em;
+	font-weight: bold;
+	font-size: 1em;
 }
 canvas {
 	width: 100%;
