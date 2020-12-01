@@ -7,19 +7,19 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	<h1>Ejercicio 12</h1>
+	<header>
+		<h1>Ejercicio 12</h1>
+	</header>
 	<h2 id="soportaAPI">¿Soporta la API?</h2>
 	<p>A continuación escoge el o los archivos para visualizarlos</p>
-	<h4>Selecciona un archivo: </h4>
-	<input title="selecciona un archivo" type="file" id="archivoTexto" onchange="archivos.leerArchivoTexto(this.files)">
+	<label for="archivoTexto">Selecciona un archivo: </label><input type="file" id="archivoTexto" onchange="archivos.leerArchivoTexto(this.files)">
 	<p id="nombreArchivo"></p>
 	<p id="tamanoArchivo"></p>
 	<p id="tipoArchivo"></p>
 	<p id="ultimaModificacion"></p>
 	<p id="contenidoArchivo"></p>  
 	<pre id="areaTexto"></pre>
-	<h4>Selecciona varios archivos: </h4>
-	<input title="selecciona varios archivos" type="file" id="variosArchivosTexto" onchange="archivos.leerVariosArchivoTexto(this.files)" multiple>
+	<label for="variosArchivosTexto">Selecciona varios archivos: </label><input type="file" id="variosArchivosTexto" onchange="archivos.leerVariosArchivoTexto(this.files)" multiple>
 	<p>Archivos seleccionados: <span id="numero">0</span></p>
 	<p>Tamaño total: <span id="tamano">0</span></p>
 	<div id="todo"></div>
