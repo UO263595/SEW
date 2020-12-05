@@ -1,0 +1,36 @@
+div.cuerpo {
+	display: table;
+	border-radius: 15px;
+	padding: 1em;
+	background-color: #919191;
+	margin: 0 auto;
+}
+body {
+	display: inline;
+	text-align: center;
+}
+#pantalla {
+	font-size: 1.2em;
+	padding: 0.6em 1em;
+	margin: 1em;
+	width: 80%;
+	display: inline;
+}
+input[type=submit] {
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 1em;
+	width: 3.5em;
+	text-align: center;
+	padding: 0.4em 1em;
+	margin: 0.8em;
+}
+input.red {
+	background-color: #FF4747;
+}
+input.lightGray {
+	background-color: #FFFFFF;
+}
+input.darkGray {
+	background-color: #EFEFEF;
+}
