@@ -1,0 +1,41 @@
+div.cuerpo {
+	display: table;
+	padding: 1em;
+	background-color: #919191;
+	margin: 0 auto;
+	border-radius: 15px;
+}
+body {
+	display: inline;
+	text-align: center;
+}
+#pila {
+	font-size: 1em;
+	width: 95%;
+	height: 3em;
+	text-align: right;
+	margin: auto;
+}
+#pantalla {
+	font-size: 1.2em;
+	width: 85%;
+	height: 4em;
+	text-align: right;
+	margin: auto;
+}
+input[type=submit] {
+	font-weight: bold;
+	font-size: 1em;
+	width: 4em;
+	text-align: center;
+	padding: 0.4em 1em;
+	margin: 0.8em;
+}
+input.lightGray {
+	background-color: #FFFFFF;
+	border: none;
+}
+input.darkGray {
+	background-color: #EFEFEF;
+	border: none;
+}

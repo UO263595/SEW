@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width, user-scalable-yes">
+	<title>Calculadora RPN</title>
+	<link rel="stylesheet" href="CalculadoraRPN.css"/>
+</head>
+<body>
+	<header>
+		<h1>Calculadora RPN</h1> 
+	</header>
+	
+		<form action='#' method='post' name='calculadora'>
+		<div class='cuerpo'>
+			<label for='pila'>PILA</label>
+			<input title='pila' type='text' id='pila' value='' readonly />
+			<label for='pantalla'>RESULTADO</label>
+			<input title='pantalla' type='text' id='pantalla' value='' readonly />
+			<div>
+				<input class='darkGray' type='submit' name='mMenos' value='m-'/>
+				<input class='darkGray' type='submit' name='mMas' value='m+'/>
+				<input class='darkGray' type='submit' name='seno' value='sin'/>
+				<input class='darkGray' type='submit' name='coseno' value='cos'/>
+				<input class='darkGray' type='submit' name='tangente' value='tan'/>
+			</div>
+			<div>
+				<input class='darkGray' type='submit' name='cuadrado' value='x&#178;'/>
+				<input class='darkGray' type='submit' name='potencia' value='x&#696;'/>
+				<input class='darkGray' type='submit' name='cosecante' value='csc'/>
+				<input class='darkGray' type='submit' name='secante' value='sec'/>
+				<input class='darkGray' type='submit' name='cotangente' value='cot'/>
+			</div>
+			<div>
+				<input class='darkGray' type='submit' name='raiz' value='&#8730;'/>
+				<input class='darkGray' type='submit' name='potenciaDiez' value='10&#829;'/>
+				<input class='darkGray' type='submit' name='logaritmo' value='log'/>
+				<input class='darkGray' type='submit' name='exponencial' value='Exp'/>
+				<input class='darkGray' type='submit' name='modulo' value='Mod'/>
+			</div>
+			<div>
+				<input class='darkGray' type='submit' name='mcr' value='mrc'/>
+				<input class='darkGray' type='submit' name='borrarCE' value='CE'/>
+				<input class='darkGray' type='submit' name='borrarC' value='C'/>
+				<input class='darkGray' type='submit' name='borrarDigito' value='&#129092;'/>
+				<input class='darkGray' type='submit' name='division' value='/'/>
+			</div>
+			<div>
+				<input class='darkGray' type='submit' name='pi' value='&#120587;'/>
+				<input class='lightGray' type='submit' name='siete' value='7'/>
+				<input class='lightGray' type='submit' name='ocho' value='8'/>
+				<input class='lightGray' type='submit' name='nueve' value='9'/>
+				<input class='darkGray' type='submit' name='multiplicacion' value='*'/>
+			</div>
+			<div>
+				<input class='darkGray' type='submit' name='factorial' value='n!'/>
+				<input class='lightGray' type='submit' name='cuatro' value='4'/>
+				<input class='lightGray' type='submit' name='cinco' value='5'/>
+				<input class='lightGray' type='submit' name='seis' value='6'/>
+				<input class='darkGray' type='submit' name='resta' value='-'/>
+			</div>
+			<div>
+				<input class='darkGray' type='submit' name='absoluto' value='|x|'/>
+				<input class='lightGray' type='submit' name='uno' value='1'/>
+				<input class='lightGray' type='submit' name='dos' value='2'/>
+				<input class='lightGray' type='submit' name='tres' value='3'/>
+				<input class='darkGray' type='submit' name='suma' value='+'/>
+			</div>
+			<div>
+				<input class='darkGray' type='submit' name='parentesis' value='( )'/>
+				<input class='darkGray' type='submit' name='igual' value='='/>
+				<input class='lightGray' type='submit' name='cero' value='0'/>
+				<input class='lightGray' type='submit' name='punto' value='.'/>
+				<input class='darkGray' type='submit' name='enter' value='enter'/>
+			</div>
+		</div>
+		</form>
+		</body>
+</html>
