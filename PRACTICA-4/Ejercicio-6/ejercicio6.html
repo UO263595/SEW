@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 6</title>
+	<link rel="stylesheet" href="Ejercicio6.css"/>
+</head>
+<body>
+	<header>
+		<h1>Ejercicio 6</h1>
+	</header>
+	<form action='#' method='post' name='buscador'>
+	<h2>Crear Base de Datos</h2>
+	<button id='bCrearBD' type='submit' name='bCrearBD'>Crear Base de datos</button>
+	<h2>Crear una tabla</h2>
+	<p>¡¡Es IMPORTANTE crear la tabla antes de realizar operaciones en ella!!</p>
+	<button id='bCrearTabla' type='submit' name='bCrearTabla'>Crear tabla PruebasUsabilidad</button>
+	<h2>Insertar datos en una tabla</h2>
+	<p>Se deben rellenar todos los campos marcados con *.</p>
+	<label for="inputDNI">DNI*: </label><input type="text" class="littleInput" id="inputDNI" name="inputDNI" placeholder="Inserta DNI..."/>
+	<label for="inputNombre">Nombre*: </label><input type="text" class="littleInput" id="inputNombre" name="inputNombre" placeholder="Inserta nombre..."/>
+	<label for="inputApellidos">Apellidos*: </label><input type="text" class="littleInput" id="inputApellidos" name="inputApellidos" placeholder="Inserta apellidos..."/>
+	<label for="inputEmail">E-mail*: </label><input type="text" class="littleInput" id="inputEmail" name="inputEmail" placeholder="Inserta e-mail..."/>
+	<label for="inputTelefono">Teléfono*: </label><input type="text" class="littleInput" id="inputTelefono" name="inputTelefono" placeholder="Inserta teléfono..."/>
+	<label for="inputEdad">Edad*: </label><input type="text" class="littleInput" id="inputEdad" name="inputEdad" placeholder="Inserta edad..."/>
+	<label for="inputSexo">Sexo (Hombre='H' || Mujer='M')*: </label><input type="text" class="littleInput" id="inputSexo" name="inputSexo" placeholder="Inserta sexo..."/>
+	<label for="inputNivel">Nivel o pericia informática (0 a 10)*: </label><input type="text" class="littleInput" id="inputNivel" name="inputNivel" placeholder="Inserta nivel..."/>
+	<label for="inputTiempo">Tiempo que ha tardado en hacer la tarea (segundos)*: </label><input type="text" class="littleInput" id="inputTiempo" name="inputTiempo" placeholder="Inserta tiempo..."/>
+	<label for="inputCorrecto">¿La tarea se ha realizado correctamente?*: </label><input type="text" class="littleInput" id="inputCorrecto" name="inputCorrecto" placeholder="Inserta sí o no..."/>
+	<label for="inputComentarios">Comentarios: </label><input type="text" class="bigInput" id="inputComentarios" name="inputComentarios" placeholder="Inserta comentarios..."/>
+	<label for="inputPropuestas">Propuestas: </label><input type="text" class="bigInput" id="inputPropuestas" name="inputPropuestas" placeholder="Inserta propuestas..."/>
+	<label for="inputValoracion">Valoración de la aplicación (0 a 10)*: </label><input type="text" class="littleInput" id="inputValoracion" name="inputValoracion" placeholder="Inserta valoración..."/>
+	<button id='bInsertarDatos' type='submit' name='bInsertarDatos'>Insertar datos</button>
+	<h2>Buscar datos en una tabla</h2>
+	<label for="inputBuscarDNI">Realiza una búsqueda por DNI: </label><input type="text" class="littleInput" id="inputBuscarDNI" name="inputBuscarDNI" placeholder="Inserta DNI..."/>
+	<button id='bBuscar' type='submit' name='bBuscar'>Buscar datos</button>
+	<h2>Modificar datos en una tabla</h2>
+	<p>Se inserta el DNI para identificar el usuario del que se quieren modificar los datos y los campos que se desean actualizar de la tabla PruebasUsabilidad.</p>
+	<label for="inputModificarDNI">DNI: </label><input type="text" class="littleInput" id="inputModificarDNI" name="inputModificarDNI" placeholder="Inserta DNI..."/>
+	<label for="inputModificarNombre">Nombre: </label><input type="text" class="littleInput" id="inputModificarNombre" name="inputModificarNombre" placeholder="Inserta nuevo nombre..."/>
+	<label for="inputModificarApellidos">Apellidos: </label><input type="text" class="littleInput" id="inputModificarApellidos" name="inputModificarApellidos" placeholder="Inserta nuevos apellidos..."/>
+	<label for="inputModificarEmail">E-mail: </label><input type="text" class="littleInput" id="inputModificarEmail" name="inputModificarEmail" placeholder="Inserta nuevo e-mail..."/>
+	<label for="inputModificarTelefono">Teléfono: </label><input type="text" class="littleInput" id="inputModificarTelefono" name="inputModificarTelefono" placeholder="Inserta nuevo teléfono..."/>
+	<label for="inputModificarEdad">Edad: </label><input type="text" class="littleInput" id="inputModificarEdad" name="inputModificarEdad" placeholder="Inserta nueva edad..."/>
+	<label for="inputModificarSexo">Sexo (Hombre='H' || Mujer='M'): </label><input type="text" class="littleInput" id="inputModificarSexo" name="inputModificarSexo" placeholder="Inserta nuevo sexo..."/>
+	<label for="inputModificarNivel">Nivel o pericia informática (0 a 10): </label><input type="text" class="littleInput" id="inputModificarNivel" name="inputModificarNivel" placeholder="Inserta nuevo nivel..."/>
+	<label for="inputModificarTiempo">Tiempo que ha tardado en hacer la tarea (segundos): </label><input type="text" class="littleInput" id="inputModificarTiempo" name="inputModificarTiempo" placeholder="Inserta nuevo tiempo..."/>
+	<label for="inputModificarCorrecto">¿La tarea se ha realizado correctamente?: </label><input type="text" class="littleInput" id="inputModificarCorrecto" name="inputModificarCorrecto" placeholder="Inserta sí o no..."/>
+	<label for="inputModificarComentarios">Comentarios: </label><input type="text" class="bigInput" id="inputModificarComentarios" name="inputModificarComentarios" placeholder="Inserta nuevos comentarios..."/>
+	<label for="inputModificarPropuestas">Propuestas: </label><input type="text" class="bigInput" id="inputModificarPropuestas" name="inputModificarPropuestas" placeholder="Inserta nuevas propuestas..."/>
+	<label for="inputModificarValoracion">Valoración de la aplicación (0 a 10): </label><input type="text" class="littleInput" id="inputModificarValoracion" name="inputModificarValoracion" placeholder="Inserta nueva valoración..."/>
+	<button id='bModificarDatos' type='submit' name='bModificarDatos'>Modificar datos</button>
+	<h2>Eliminar datos en una tabla</h2>
+	<p>Se inserta el DNI para identificar el usuario que se quiere eliminar de la tabla PruebasUsabilidad.</p>
+	<label for="inputEliminarDNI">DNI: </label><input type="text" class="littleInput" id="inputEliminarDNI" name="inputEliminarDNI" placeholder="Inserta DNI..."/>
+	<button id='bEliminarDatos' type='submit' name='bEliminarDatos'>Eliminar datos</button>
+	<h2>Generar informe</h2>
+	<button id='bGenerarInforme' type='submit' name='bGenerarInforme'>Generar informe</button>
+	<h2>Cargar datos desde un archivo en una tabla de la Base de Datos</h2>
+	<button id='bCargarDatos' type='submit' name='bCargarDatos'>Cargar datos</button>
+	<h2>Exportar datos a un archivo los datos desde una tabla de la Base de Datos</h2>
+	<button id='bExportarDatos' type='submit' name='bExportarDatos'>Exportar datos</button>
+	<h2>Resultado de las operaciones:</h2>
+	</form>
+	<p>Conexión establecida con localhost via TCP/IP</p><p>Base de datos 'BD' creada con éxito</p>	</body>
+</html>
