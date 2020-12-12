@@ -22,6 +22,7 @@ body {
 label, input {
 	display: block;
 	text-align: left;
+	margin: 0.8em;
 }
 .littleInput {
 	width: 30%;

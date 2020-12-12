@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width, user-scalable-yes">
 	<title>Ejercicio 6</title>
 	<link rel="stylesheet" href="Ejercicio6.css"/>
 </head>
