@@ -10,7 +10,7 @@
 	<header>
 		<h1>Ejercicio 6</h1>
 	</header>
-	<form action='#' method='post' name='buscador'>
+	<form action='#' method='post' name='formulario' enctype='multipart/form-data'>
 	<h2>Crear Base de Datos</h2>
 	<button id='bCrearBD' type='submit' name='bCrearBD'>Crear Base de datos</button>
 	<h2>Crear una tabla</h2>
@@ -58,6 +58,7 @@
 	<h2>Generar informe</h2>
 	<button id='bGenerarInforme' type='submit' name='bGenerarInforme'>Generar informe</button>
 	<h2>Cargar datos desde un archivo en una tabla de la Base de Datos</h2>
+	<input type='file' name='archivoSubido'/>
 	<button id='bCargarDatos' type='submit' name='bCargarDatos'>Cargar datos</button>
 	<h2>Exportar datos a un archivo los datos desde una tabla de la Base de Datos</h2>
 	<button id='bExportarDatos' type='submit' name='bExportarDatos'>Exportar datos</button>
@@ -281,8 +282,8 @@
 						$consultaPre->execute();
 						if ($consultaPre->affected_rows == -1) echo "<p>No se han podido modificar los datos.</p>";
 						else echo "<p>Los datos se han modificado con éxito.</p>";
+						$consultaPre->close();
 					} else {echo "<p>No se encuentra el usuario a modificar.</p>";}
-					$consultaPre->close();
 				} catch (Error $e) {
 					echo "<p>ERROR: " . $e->getMessage() . "</p>";
 				}
@@ -337,10 +338,10 @@
 				if($this->db->connect_error) {
 					exit ("<p>ERROR de conexión:" . $this->db->connect_error . "</p>");  
 				} else {echo "<p>Conexión establecida</p>";}
-				
+					
+				try {
 					$consultaPre = $this->db->prepare("SELECT * FROM PruebasUsabilidad");   
 					$consultaPre->execute();
-				try {	
 					$resultado = $consultaPre->get_result();
 					if ($resultado->fetch_assoc()!=NULL) {
 						echo "<p>Informe de la tabla 'PruebasUsabilidad':</p>";
@@ -367,7 +368,7 @@
 						echo "<p>Frecuencia del % de cada tipo de sexo entre los usuarios = porcentaje de hombres:" . $hombres/$muestras*100 . "% porcentaje de mujeres:" . $mujeres/$muestras*100 . "%</p>";
 						echo "<p>Valor medio del nivel o pericia informática de los usuarios = " . $pericia/$muestras . "</p>";
 						echo "<p>Tiempo medio para la tarea = ". $tiempo/$muestras . "</p>";
-						echo "<p>Porcentaje de usuarios que han realizado la tarea correctamente = ". $correcto/$muestras . "</p>";
+						echo "<p>Porcentaje de usuarios que han realizado la tarea correctamente = ". $correcto/$muestras*100 . "%</p>";
 						echo "<p>Valor medio de la puntuación de los usuarios sobre la aplicación = ". $puntuacion/$muestras . "</p>"; 
 					} else {echo "<p>No hay datos en la tabla.</p>";}
 					$consultaPre->close();
@@ -384,7 +385,15 @@
 				} else {echo "<p>Conexión establecida</p>";}
 
 				try {
-					$archivo = fopen("pruebasUsabilidad.csv","r"); 
+					if (!(isset($_FILES['archivoSubido']) && $_FILES['archivoSubido']['error'] === UPLOAD_ERR_OK)) { 
+						echo "<p>Debes seleccionar un archivo.</p>"; 
+						return;
+					}
+					if ($_FILES['archivoSubido']['type'] != 'application/vnd.ms-excel') { 
+						echo "<p>Formato de archivo no válido.</p>"; 
+						return;
+					}
+					$archivo = fopen($_FILES['archivoSubido']['tmp_name'],"r"); 
 					while(($datos=fgetcsv($archivo, 1000, ";")) !== FALSE) {						
 						$consultaPre = $this->db->prepare("INSERT INTO PruebasUsabilidad (codigo,nombre,apellidos,email,telefono,edad,sexo,nivel,tiempo,correcto,comentarios,propuestas,valoracion) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)");
 						$consultaPre->bind_param('ssssdisidsssi', 
@@ -407,6 +416,7 @@
 					}
 					fclose($archivo);
 					echo "<p>Los datos se han importado con éxito.</p>";
+				
 				} catch (Error $e) {
 					echo "<p>ERROR: " . $e->getMessage() . "</p>";
 				}
@@ -419,13 +429,13 @@
 					exit ("<p>ERROR de conexión:" . $this->db->connect_error . "</p>");  
 				} else {echo "<p>Conexión establecida</p>";}
 				
-				$consultaPre = $this->db->prepare("SELECT * FROM PruebasUsabilidad");    	
-				$consultaPre->execute();
-				$resultado = $consultaPre->get_result();
-				$consultaPre->close();
-				$this->db->close();
-				
 				try {
+					$consultaPre = $this->db->prepare("SELECT * FROM PruebasUsabilidad");    	
+					$consultaPre->execute();
+					$resultado = $consultaPre->get_result();
+					$consultaPre->close();
+					$this->db->close();
+				
 					$archivo = fopen("datos.csv","w"); 
 					$campos = array('Codigo (DNI)', 'Nombre', 'Apellidos', 'Email', 'Telefono', 'Edad', 'Sexo', 'Nivel', 'Tiempo', 'Correcto', 'Comentarios', 'Propuestas', 'Valoracion');
 					fputcsv($archivo, $campos, ";");

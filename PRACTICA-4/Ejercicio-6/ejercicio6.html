@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width, user-scalable-yes">
 	<title>Ejercicio 6</title>
 	<link rel="stylesheet" href="Ejercicio6.css"/>
 </head>
@@ -9,7 +10,7 @@
 	<header>
 		<h1>Ejercicio 6</h1>
 	</header>
-	<form action='#' method='post' name='buscador'>
+	<form action='#' method='post' name='formulario' enctype='multipart/form-data'>
 	<h2>Crear Base de Datos</h2>
 	<button id='bCrearBD' type='submit' name='bCrearBD'>Crear Base de datos</button>
 	<h2>Crear una tabla</h2>
@@ -57,6 +58,7 @@
 	<h2>Generar informe</h2>
 	<button id='bGenerarInforme' type='submit' name='bGenerarInforme'>Generar informe</button>
 	<h2>Cargar datos desde un archivo en una tabla de la Base de Datos</h2>
+	<input type='file' name='archivoSubido'/>
 	<button id='bCargarDatos' type='submit' name='bCargarDatos'>Cargar datos</button>
 	<h2>Exportar datos a un archivo los datos desde una tabla de la Base de Datos</h2>
 	<button id='bExportarDatos' type='submit' name='bExportarDatos'>Exportar datos</button>
