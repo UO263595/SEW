@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width, user-scalable-yes">
+	<title>Ejercicio 7</title>
+	<link rel="stylesheet" href="Ejercicio7.css"/>
+</head>
+<body>
+	<header>
+		<h1>Ejercicio 7</h1>
+	</header>
+	<p>Sistema de gestión de una flota de tiendas.</p>
+	<form action='#' method='post' name='formulario' enctype='multipart/form-data'>
+	<h2>Tiendas</h2>
+	<h3>Añadir tienda</h3>
+	<label for="inputInsetarTienda">Código: </label><input type="text" class="littleInput" id="inputInsetarTienda" name="inputInsetarTienda" placeholder="Inserta código..."/>
+	<label for="inputInsetarDireccion">Dirección: </label><input type="text" class="littleInput" id="inputInsetarDireccion" name="inputInsetarDireccion" placeholder="Inserta dirección..."/>
+	<button id='bInsertarTienda' type='submit' name='bInsertarTienda'>Insertar tienda</button>
+	<h3>Cargar tiendas desde archivo</h3>
+	<label for='archivoTiendas'>Selecciona un archivo: </label><input type='file' id='archivoTiendas' name='archivoTiendas'/>
+	<button id='bCargarTiendas' type='submit' name='bCargarTiendas'>Cargar tiendas</button>
+	<h3>Exportar tiendas</h3>
+	<button id='bExportarTiendas' type='submit' name='bExportarTiendas'>Exportar tiendas</button>
+	<h2>Personal</h2>
+	<h3>Contratar personal</h3>
+	<label for="inputDNI">DNI: </label><input type="text" class="littleInput" id="inputDNI" name="inputDNI" placeholder="Inserta DNI..."/>
+	<label for="inputNombre">Nombre: </label><input type="text" class="littleInput" id="inputNombre" name="inputNombre" placeholder="Inserta nombre..."/>
+	<label for="inputApellidos">Apellidos: </label><input type="text" class="littleInput" id="inputApellidos" name="inputApellidos" placeholder="Inserta apellidos..."/>
+	<label for="inputTelefono">Teléfono: </label><input type="text" class="littleInput" id="inputTelefono" name="inputTelefono" placeholder="Inserta teléfono..."/>
+	<label for="inputCargo">Cargo: </label><input type="text" class="littleInput" id="inputCargo" name="inputCargo" placeholder="Inserta cargo..."/>
+	<label for="inputSueldo">Sueldo (euros): </label><input type="text" class="littleInput" id="inputSueldo" name="inputSueldo" placeholder="Inserta sueldo..."/>
+	<label for="inputExperiencia">Experiencia (años): </label><input type="text" class="littleInput" id="inputExperiencia" name="inputExperiencia" placeholder="Inserta experiencia..."/>
+	<label for="inputTiendaPersonal">Tienda: </label><input type="text" class="littleInput" id="inputTiendaPersonal" name="inputTiendaPersonal" placeholder="Inserta tienda..."/>
+	<p>*Se deben rellenar todos los campos</p>
+	<button id='bContratar' type='submit' name='bContratar'>Contratar</button>
+	<h3>Despedir</h3>
+	<label for="inputDespedirDNI">DNI: </label><input type="text" class="littleInput" id="inputDespedirDNI" name="inputDespedirDNI" placeholder="Inserta DNI..."/>
+	<button id='bDespedir' type='submit' name='bDespedir'>Despedir</button>
+	<h3>Actualizar datos</h3>
+	<p>Se introduce el DNI de la persona de la que se quieren actualizar los datos y se rellenan los campos que se quieren modificar.
+	<label for="inputModificarDNI">DNI: </label><input type="text" class="littleInput" id="inputModificarDNI" name="inputModificarDNI" placeholder="Inserta DNI..."/>
+	<label for="inputModificarTelefono">Teléfono: </label><input type="text" class="littleInput" id="inputModificarTelefono" name="inputModificarTelefono" placeholder="Inserta teléfono..."/>
+	<label for="inputModificarCargo">Cargo: </label><input type="text" class="littleInput" id="inputModificarCargo" name="inputModificarCargo" placeholder="Inserta cargo..."/>
+	<label for="inputModificarSueldo">Sueldo (euros): </label><input type="text" class="littleInput" id="inputModificarSueldo" name="inputModificarSueldo" placeholder="Inserta sueldo..."/>
+	<button id='bActualizar' type='submit' name='bActualizar'>Actualizar</button>
+	<h3>Cargar personal desde archivo</h3>
+	<label for='archivoPersonal'>Selecciona un archivo: </label><input type='file' id='archivoPersonal' name='archivoPersonal'/>
+	<button id='bCargarPersonal' type='submit' name='bCargarPersonal'>Cargar personal</button>
+	<h3>Exportar personal</h3>
+	<button id='bExportarPersonal' type='submit' name='bExportarPersonal'>Exportar personal</button>
+	<h3>Buscar personal por cargo</h3>
+	<label for="inputBuscarCargo">Cargo: </label><input type="text" class="littleInput" id="inputBuscarCargo" name="inputBuscarCargo" placeholder="Inserta cargo..."/>
+	<button id='bBuscarCargo' type='submit' name='bBuscarCargo'>Busca por cargo</button>
+	<h2>Stock</h2>
+	<h3>Añadir nuevo producto</h3>
+	<label for="inputProducto">Producto: </label><input type="text" class="littleInput" id="inputProducto" name="inputProducto" placeholder="Inserta producto..."/>
+	<label for="inputCantidad">Cantidad: </label><input type="text" class="littleInput" id="inputCantidad" name="inputCantidad" placeholder="Inserta cantidad..."/>
+	<label for="inputPrecio">Precio (euros): </label><input type="text" class="littleInput" id="inputPrecio" name="inputPrecio" placeholder="Inserta precio..."/>
+	<label for="inputTiendaProducto">Tienda: </label><input type="text" class="littleInput" id="inputTiendaProducto" name="inputTiendaProducto" placeholder="Inserta tienda..."/>
+	<p>*Se deben rellenar todos los campos</p>
+	<button id='bInsertarProducto' type='submit' name='bInsertarProducto'>Insertar producto</button>
+	<h3>Cambiar la cantidad de un producto</h3>
+	<label for="inputProductoCantidad">Producto: </label><input type="text" class="littleInput" id="inputProductoCantidad" name="inputProductoCantidad" placeholder="Inserta producto..."/>
+	<label for="inputCantidadProducto">Cantidad: </label><input type="text" class="littleInput" id="inputCantidadProducto" name="inputCantidadProducto" placeholder="Inserta cantidad..."/>
+	<button id='bCantidadProducto' type='submit' name='bCantidadProducto'>Cambiar cantidad producto</button>
+	<h3>Cambiar el precio de un producto</h3>
+	<label for="inputProductoPrecio">Producto: </label><input type="text" class="littleInput" id="inputProductoPrecio" name="inputProductoPrecio" placeholder="Inserta producto..."/>
+	<label for="inputPrecioProducto">Precio (euros): </label><input type="text" class="littleInput" id="inputPrecioProducto" name="inputPrecioProducto" placeholder="Inserta precio..."/>
+	<button id='bPrecioProducto' type='submit' name='bPrecioProducto'>Cambiar precio producto</button>
+	<h3>Cargar productos desde archivo</h3>
+	<label for='archivoProductos'>Selecciona un archivo: </label><input type='file' id='archivoProductos' name='archivoProductos'/>
+	<button id='bCargarProductos' type='submit' name='bCargarProductos'>Cargar productos</button>
+	<h3>Exportar productos</h3>
+	<button id='bExportarProductos' type='submit' name='bExportarProductos'>Exportar productos</button>
+	<h2>Pedidos</h2>
+	<h3>Añadir nuevo pedido</h3>
+	<label for="inputPedido">Producto: </label><input type="text" class="littleInput" id="inputPedido" name="inputPedido" placeholder="Inserta producto..."/>
+	<label for="inputPedidoCantidad">Cantidad: </label><input type="text" class="littleInput" id="inputPedidoCantidad" name="inputPedidoCantidad" placeholder="Inserta cantidad..."/>
+	<label for="inputPedidoPrioridad">Prioridad (1 || 2 || 3): </label><input type="text" class="littleInput" id="inputPedidoPrioridad" name="inputPedidoPrioridad" placeholder="Inserta prioridad..."/>
+	<p>Prioridad: 1=Mucha || 2=Media || 3=Poca</p>
+	<label for="inputTiendaPedido">Tienda: </label><input type="text" class="littleInput" id="inputTiendaPedido" name="inputTiendaPedido" placeholder="Inserta tienda..."/>
+	<p>*Se deben rellenar todos los campos</p>
+	<button id='bInsertarPedido' type='submit' name='bInsertarPedido'>Insertar pedido</button>
+	<h3>Cambiar la cantidad de un pedido</h3>
+	<label for="inputCantidadPedido">Producto: </label><input type="text" class="littleInput" id="inputCantidadPedido" name="inputCantidadPedido" placeholder="Inserta producto..."/>
+	<label for="inputCambiarCantidadPedido">Cantidad: </label><input type="text" class="littleInput" id="inputCambiarCantidadPedido" name="inputCambiarCantidadPedido" placeholder="Inserta cantidad..."/>
+	<button id='bCantidadPedido' type='submit' name='bCantidadPedido'>Cambiar cantidad pedido</button>
+	<h3>Cambiar la prioridad de un pedido</h3>
+	<label for="inputPrioridadPedido">Producto: </label><input type="text" class="littleInput" id="inputPrioridadPedido" name="inputPrioridadPedido" placeholder="Inserta producto..."/>
+	<label for="inputCambiarPrioridadPedido">Prioridad (1 || 2 || 3): </label><input type="text" class="littleInput" id="inputCambiarPrioridadPedido" name="inputCambiarPrioridadPedido" placeholder="Inserta prioridad..."/>
+	<button id='bPrioridadPedido' type='submit' name='bPrioridadPedido'>Cambiar prioridad producto</button>
+	<h3>Cargar pedidos desde archivo</h3>
+	<label for='archivoPedidos'>Selecciona un archivo: </label><input type='file' id='archivoPedidos' name='archivoPedidos'/>
+	<button id='bCargarPedidos' type='submit' name='bCargarPedidos'>Cargar pedidos</button>
+	<h3>Exportar pedidos</h3>
+	<button id='bExportarPedidos' type='submit' name='bExportarPedidos'>Exportar pedidos</button>
+	<h2>Resultado de las operaciones:</h2>
+	</form>
+	<p>Conexión establecida con localhost via TCP/IP</p><p>Base de datos 'BD' creada con éxito</p><p>Tabla 'Tiendas' creada con éxito </p><p>Tabla 'Personal' creada con éxito </p><p>Tabla 'Stock' creada con éxito </p><p>Tabla 'Pedidos' creada con éxito </p>	</body>
+</html>

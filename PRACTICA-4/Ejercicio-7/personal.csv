@@ -1,0 +1,11 @@
+Codigo (DNI);Nombre;Apellidos;Telefono;Cargo;Sueldo;Experiencia;Tienda
+1;nombre1;apellidos1;1;cargo1;100;1;tienda1
+10;nombre10;apellidos10;10;cargo10;1000;10;tienda2
+2;nombre2;apellidos2;2;cargo2;200;2;tienda3
+3;nombre3;apellidos3;3;cargo3;300;3;tienda4
+4;nombre4;apellidos4;4;cargo4;400;4;tienda5
+5;nombre5;apellidos5;5;cargo5;500;5;tienda6
+6;nombre6;apellidos6;6;cargo6;600;6;tienda7
+7;nombre7;apellidos7;7;cargo7;700;7;tienda8
+8;nombre8;apellidos8;8;cargo8;800;8;tienda9
+9;nombre9;apellidos9;9;cargo9;900;9;tienda10
