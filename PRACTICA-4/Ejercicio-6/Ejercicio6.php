@@ -58,7 +58,7 @@
 	<h2>Generar informe</h2>
 	<button id='bGenerarInforme' type='submit' name='bGenerarInforme'>Generar informe</button>
 	<h2>Cargar datos desde un archivo en una tabla de la Base de Datos</h2>
-	<input type='file' name='archivoSubido'/>
+	<label for='archivoSubido'>Selecciona un archivo: </label><input type='file' id='archivoSubido' name='archivoSubido'/>
 	<button id='bCargarDatos' type='submit' name='bCargarDatos'>Cargar datos</button>
 	<h2>Exportar datos a un archivo los datos desde una tabla de la Base de Datos</h2>
 	<button id='bExportarDatos' type='submit' name='bExportarDatos'>Exportar datos</button>
@@ -394,7 +394,9 @@
 						return;
 					}
 					$archivo = fopen($_FILES['archivoSubido']['tmp_name'],"r"); 
-					while(($datos=fgetcsv($archivo, 1000, ";")) !== FALSE) {						
+					$first = true;
+					while(($datos=fgetcsv($archivo, 1000, ";")) !== FALSE) {		
+						if ($first) { $first = false; continue; }
 						$consultaPre = $this->db->prepare("INSERT INTO PruebasUsabilidad (codigo,nombre,apellidos,email,telefono,edad,sexo,nivel,tiempo,correcto,comentarios,propuestas,valoracion) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)");
 						$consultaPre->bind_param('ssssdisidsssi', 
 						$datos[0],
@@ -436,7 +438,7 @@
 					$consultaPre->close();
 					$this->db->close();
 				
-					$archivo = fopen("datos.csv","w"); 
+					$archivo = fopen("pruebasUsabilidad.csv","w"); 
 					$campos = array('Codigo (DNI)', 'Nombre', 'Apellidos', 'Email', 'Telefono', 'Edad', 'Sexo', 'Nivel', 'Tiempo', 'Correcto', 'Comentarios', 'Propuestas', 'Valoracion');
 					fputcsv($archivo, $campos, ";");
 					if ($resultado->fetch_assoc()!=NULL) {
